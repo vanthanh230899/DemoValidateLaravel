@@ -8,7 +8,7 @@ use App\users;
 class RegisterController extends Controller
 {
     public function getRegister(){
-        return view('demovalidation');
+        return view('register');
     }
 
     public function postRegister(Request $request){
@@ -38,6 +38,7 @@ class RegisterController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect('/register')->with('thongbao','Đăng ký thành công');
+        return redirect('/')->with('thongbao','Đăng ký thành công');
     }
+
 }

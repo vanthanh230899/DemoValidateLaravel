@@ -13,13 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/demo',function(){
-    return view('demovalidation');
-});
-
-Route::get('register','RegisterController@getRegister');
-Route::post('register','RegisterController@postRegister');
+Route::get('/','RegisterController@getRegister');
+Route::post('/','RegisterController@postRegister');
